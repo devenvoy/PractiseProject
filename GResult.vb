@@ -23,4 +23,10 @@ Public Class frmResult
         End Using
 
     End Sub
+
+    Private Sub frmResult_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        Dim size = Me.Size()
+        DataGridView1.Width = size.Width
+        DataGridView1.Height = size.Height
+    End Sub
 End Class
